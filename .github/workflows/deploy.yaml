@@ -21,13 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # NOTE: Ensure your build script exists and creates the .open-next folder
-      - name: Build
-        run: npm run build
+      # This is the critical change: ensure your build script 
+      # performs both Next.js build AND OpenNext conversion
+      - name: Build and Configure
+        run: |
+          npm run build
+          npx opennextjs-cloudflare
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          npx wrangler pages deploy .open-next/assets --project-name=mountbakerwebdesigns
+          npx wrangler deploy
