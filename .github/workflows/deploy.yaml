@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    # Define the environment variable here so it applies to all steps
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
