@@ -1,11 +1,11 @@
 'use client'
 import Image from "next/image";
 import {useState} from "react";
-import { useTheme } from '../../Components/ThemeContext';
+import {useTheme} from '../../Components/ThemeContext';
 
 export default function Home() {
 
-const {isDark, toggleTheme} = useTheme();    
+    const {isDark, toggleTheme} = useTheme();
 
     return (
         <main>
@@ -14,7 +14,7 @@ const {isDark, toggleTheme} = useTheme();
                 <div className="absolute inset-0 -z-10 overflow-hidden">
                     {/* Light Image */}
                     <Image
-                        src="/MountBakerLight.png"
+                        src="/MountBaker_Light.png"
                         alt="Mount Baker Light"
                         fill
                         sizes="100vw"
@@ -23,27 +23,96 @@ const {isDark, toggleTheme} = useTheme();
                     />
                     {/* Dark Image */}
                     <Image
-                        src="/MountBakerDark.png"
+                        src="/MountBaker_Dark.png"
                         alt="Mount Baker Dark"
                         fill
                         sizes="100vw"
-                        className={`object-cover object-center transition-opacity duration-1000 ease-in-out ${isDark? 'opacity-100' : 'opacity-0'}`}
+                        className={`object-cover object-center transition-opacity duration-1000 ease-in-out ${isDark ? 'opacity-100' : 'opacity-0'}`}
                         priority
                     />
+                    {/* White Overlay */}
+                    <div
+                        className={`absolute inset-0 ${isDark ? 'bg-black opacity-0' : 'bg-white opacity-50'}  pointer-events-none`}/>
+                    {/* Bottom Gradient Fade */}
+                    <div
+                        className={` absolute inset-0 bg-gradient-to-b from-transparent via-transparent ${isDark ? 'to-[#191A1C]' : 'to-white'} pointer-events-none`}/>
                 </div>
-                <div
-                    className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-                    <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-                        <h1 className="text-5xl dark:text-white text-black">Custom Web Design</h1>
+                    <div className="flex-1 flex flex-col gap-[32px] justify-center items-center p-6 w-full min-h-screen">
+                        <h2 className="text-2xl dark:text-white text-black">Custom Designs, Custom Code</h2>
+                        <h2 className="text-5xl">Small Business Web Designer</h2>
+                        <p>No page builders or WordPress. We offer 100% hand-coded websites with superior results
+                            starting at $175/mo.</p>
 
-                        <div className="flex gap-4 items-center flex-col sm:flex-row">
-                            
+                        <div className="flex flex-row gap-4 items-center flex-col sm:flex-row">
+                            <a href="/contact"
+                               className="rounded-3xl border-slate-800 px-6 py-2 hover:bg-slate-800 hover:text-white transition-all">
+                                Get Started
+                            </a>
+                            <a href="/contact"
+                               className="rounded-3xl border-slate-800 px-6 py-2 hover:bg-slate-800 hover:text-white transition-all">
+                                About Us
+                            </a>
                         </div>
                     </div>
-                    <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-                    </footer>
+                    <div className="flex-1"></div>
+            </section>
+            <section>
+                <div className="flex flex-col justify-center items-center px-4">
+                    <h3 className="text-4xl py-10">Why choose us?</h3>
+                    <p className="w-[50%] text-center text-md">At Mount Baker Web Designs, we don’t use generic
+                        templates, page builders, or WordPress. We build
+                        every site from the ground up, writing the code entirely by hand. This approach gives you two
+                        major advantages: unmatched performance and better SEO, which helps your business rank higher
+                        and capture more leads.
+                    </p>
+                </div>
+                <div className="grid grid-cols-3 gap-2 px-[14%] py-20">
+                    <div
+                        className="col-span-1 row-span-2 bg-white/50 backdrop-blur-md border border-white/50 shadow-sm p-8 rounded-3xl">At
+                        Mount Baker Web Designs, we don’t use generic templates, page builders, or WordPress. We build
+                        every site from the ground up, writing the code entirely by hand. This approach gives you two
+                        major advantages: unmatched performance and better SEO, which helps your business rank higher
+                        and capture more leads.
+                    </div>
+                    <div
+                        className="col-span-2 row-span-1 bg-white/50 backdrop-blur-md border border-white/50 shadow-sm p-8 rounded-3xl">At
+                        Mount Baker Web Designs, we don’t use generic templates, page builders, or WordPress. We build
+                        every site from the ground up, writing the code entirely by hand. This approach gives you two
+                        major advantages: unmatched performance and better SEO, which helps your business rank higher
+                        and capture more leads.
+                    </div>
+                    <div
+                        className="col-span-1 row-span-1 bg-white/50 backdrop-blur-md border border-white/50 shadow-sm p-8 rounded-3xl">At
+                        Mount Baker Web Designs, we don’t use generic templates, page builders, or WordPress. We build
+                        every site from the ground up, writing the code entirely by hand. This approach gives you two
+                        major advantages: unmatched performance and better SEO, which helps your business rank higher
+                        and capture more leads.
+                    </div>
+                    <div
+                        className="col-span-1 row-span-1 bg-white/50 backdrop-blur-md border border-white/50 shadow-sm p-8 rounded-3xl">At
+                        Mount Baker Web Designs, we don’t use generic templates, page builders, or WordPress. We build
+                        every site from the ground up, writing the code entirely by hand. This approach gives you two
+                        major advantages: unmatched performance and better SEO, which helps your business rank higher
+                        and capture more leads.
+                    </div>
+                    <div
+                        className="col-span-2 row-span-1 bg-white/50 backdrop-blur-md border border-white/50 shadow-sm p-8 rounded-3xl">At
+                        Mount Baker Web Designs, we don’t use generic templates, page builders, or WordPress. We build
+                        every site from the ground up, writing the code entirely by hand. This approach gives you two
+                        major advantages: unmatched performance and better SEO, which helps your business rank higher
+                        and capture more leads.
+                    </div>
+                    <div
+                        className="col-span-1 row-span-1 bg-white/50 backdrop-blur-md border border-white/50 shadow-sm p-8 rounded-3xl">At
+                        Mount Baker Web Designs, we don’t use generic templates, page builders, or WordPress. We build
+                        every site from the ground up, writing the code entirely by hand. This approach gives you two
+                        major advantages: unmatched performance and better SEO, which helps your business rank higher
+                        and capture more leads.
+                    </div>
                 </div>
             </section>
+            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+            </footer>
         </main>
     );
 }
