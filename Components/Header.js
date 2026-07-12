@@ -34,11 +34,11 @@ export default function Header() {
                     height="50"
                     priority
                 />
-                <div className="text-[1.3rem] dark:text-white text-black leading-6 text-center">Mount Baker <br/>
-                    <span className="text-[1.1rem]">Web Designs</span>
+                <div className="text-[1.3rem] dark:text-white text-black leading-6 text-center font-ibm font-bold">MOUNT BAKER <br/>
+                    <span className="text-[1.1rem] font-inter font-normal">Web Designs</span>
                 </div>
             </div>
-            <nav className="flex gap-6 text-xl">
+            <nav className="flex gap-8 text-[1.4rem] font-ibm">
                 <a href="/" className="text-slate-900 dark:text-white">Home</a>
                 <a href="/about" className="text-slate-900 dark:text-white">About Us</a>
                 <a href="/services" className="text-slate-900 dark:text-white">Services</a>
@@ -46,15 +46,15 @@ export default function Header() {
             </nav>
             <div className={"flex flex-row items-center justify-center gap-4"}>
                 <a href="/contact"
-                   className="rounded-3xl border-slate-800 px-6 py-2 hover:bg-slate-800 hover:text-white transition-all">
-                    Get Started
+                   className="bg-slate-300 hover:bg-[#93a9a8] font-inter text-xl text-black rounded-3xl border-slate-800 px-6 py-2 hover:text-black transition-all duration-500">
+                    360-318-5558
                 </a>
-                <button
-                    className="rounded-3xl border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm "
-                    onClick={() => toggleTheme()}
-                >
-                    Theme
-                </button>
+                {/*<button*/}
+                {/*    className="rounded-3xl border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm "*/}
+                {/*    onClick={() => toggleTheme()}*/}
+                {/*>*/}
+                {/*    Theme*/}
+                {/*</button>*/}
             </div>
         </header>
     );
