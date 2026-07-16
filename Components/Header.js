@@ -47,7 +47,7 @@ export default function Header() {
             <div className={"flex flex-row items-center justify-center gap-4"}>
                 <a href="/contact"
                    className="bg-[#d4c9ca] hover:bg-[#beaeaf] font-inter text-xl text-black rounded-3xl border-slate-800 px-6 py-2 hover:text-black transition-all duration-500">
-                    360-318-5558
+                    208-310-2163
                 </a>
                 {/*<button*/}
                 {/*    className="rounded-3xl border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm "*/}
