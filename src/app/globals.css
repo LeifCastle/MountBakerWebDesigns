@@ -19,6 +19,40 @@
     --font-ibm: "IBM Plex Mono", monospace;
     --font-inter: "Inter Inter", monospace;
 }
+@layer components {
+    .btn-primary {
+        @apply bg-[#beaeaf] hover:bg-[#516565] rounded-3xl border-slate-800 px-6 py-2 hover:text-white transition-all duration-[0.4s];
+    }
+    .glass-card {
+        @apply relative
+            /* Apple uses a very light white/grey tint with high transparency */
+        bg-white/10
+            /* The backdrop blur is the most important part */
+        backdrop-blur-[20px]
+            /* Critical: Subtle white border for the "edge" highlight */
+        border border-white/20
+            /* Adding an inner shadow creates the 'depth' Apple is known for */
+        shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_8px_32px_rgba(0,0,0,0.1)]
+        rounded-3xl p-6;
+
+        /* Ensures the card doesn't look flat when rendered */
+        isolation: isolate;
+    }
+    .glass-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(147,169,168,0.15);
+        filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(147, 169, 168, 0.4);
+        border-radius: 1.5rem; /* Match your rounded-3xl */
+        z-index: -1;
+    }
+    .glass-content {
+        
+    }
+}
 
 body {
 	background: var(--background);

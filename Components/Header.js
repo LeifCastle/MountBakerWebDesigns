@@ -25,7 +25,7 @@ export default function Header() {
     
     return (
         <header
-            className={`${isScrolled ? 'w-full top-0' : 'w-[80%] top-7 rounded-3xl'} fixed inset-x-0 mx-auto flex justify-between items-center  z-50 px-8 py-5 bg-[#beaeaf] shadow-[0_4px_20px_rgba(169,147,148,0.5)] transition-scroll duration-600`}>
+            className={`${isScrolled ? 'w-full top-0' : 'w-[80%] top-7 rounded-3xl'} fixed inset-x-0 mx-auto flex justify-between items-center  z-50 px-8 py-5 bg-[#93a9a8] shadow-[0_4px_20px_rgba(169,147,148,0.5)] transition-scroll duration-600`}>
             <div className="flex gap-4 items-center">
                 <Image
                     src="/logo.svg"
@@ -46,7 +46,7 @@ export default function Header() {
             </nav>
             <div className={"flex flex-row items-center justify-center gap-4"}>
                 <a href="/contact"
-                   className="bg-slate-300 hover:bg-[#93a9a8] font-inter text-xl text-black rounded-3xl border-slate-800 px-6 py-2 hover:text-black transition-all duration-500">
+                   className="bg-[#d4c9ca] hover:bg-[#beaeaf] font-inter text-xl text-black rounded-3xl border-slate-800 px-6 py-2 hover:text-black transition-all duration-500">
                     360-318-5558
                 </a>
                 {/*<button*/}
